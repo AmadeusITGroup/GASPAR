@@ -1,10 +1,43 @@
-import pytest
-from package import square
+#!/usr/bin/env python3
+"""
+Simple test to verify that the GASPAR package is correctly installed and importable.
+"""
+
+import unittest
+import asyncio
 
 
-@pytest.mark.parametrize(
-    "x,res",
-    [(1, 1), (2, 4), (-1, 1), (0, 0)],
-)
-def test_square(x: int, res: int) -> None:
-    assert square(x) == res
+class TestGaspar(unittest.TestCase):
+    """Basic tests for GASPAR package."""
+
+    def test_import(self):
+        """Test that the package can be imported."""
+        from package.gaspar.config import GasparConfig, ModelConfig, StorageConfig, PipelineConfig
+
+        # Create a test configuration
+        config = GasparConfig(
+            model=ModelConfig(
+                provider="openai",
+                model_name="gpt-4",
+                token="test-key"
+            ),
+            storage=StorageConfig(
+                type="local",
+                local_path="./data"
+            ),
+            pipeline=PipelineConfig(
+                batch_size=10,
+                max_retries=2,
+                temp_directory="./temp"
+            ),
+            logging_level="DEBUG"
+        )
+
+        # Verify configuration was created correctly
+        self.assertEqual(config.model.provider, "openai")
+        self.assertEqual(config.storage.type, "local")
+        self.assertEqual(config.pipeline.batch_size, 10)
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -6,9 +6,49 @@ build-backend = "setuptools.build_meta"
 write_to = "package/_version.py"
 write_to_template = "__version__ = \"{version}\"\n"
 
+# GASPAR package dependencies
+[project]
+name = "gaspar"
+description = "GenAI-powered System for Privacy incident Analysis and Recovery"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+dynamic = ["version"]
+
+# GASPAR dependencies
+dependencies = [
+    "pydantic>=2.0",
+    "aiofiles>=23.2.1",
+    "aiohttp>=3.8.1",
+    "openai>=1.0.0",
+    "anthropic>=0.3.0",
+    "tenacity>=8.2.0",
+    "PyYAML>=6.0",
+    "azure-storage-blob>=12.19.0",
+    "azure-identity>=1.15.0",
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.2.0",
+]
+
+[project.scripts]
+gaspar = "package.gaspar.cli.main:main"
+
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "--strict-markers --doctest-modules --doctest-glob='*.rst' --ignore=setup.py"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
 doctest_optionflags = [
     "NORMALIZE_WHITESPACE",
     "IGNORE_EXCEPTION_DETAIL",

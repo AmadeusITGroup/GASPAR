@@ -1,0 +1,59 @@
+Privacy Impact Assessment Document
+
+1. Data Collection Overview
+The system collects the following personal information:
+- Full Name (Required)
+- Email Address (Required)
+- Phone Number (Optional)
+- Physical Address (Optional)
+- Date of Birth (Required)
+- Social Security Number (Required)
+- Banking Information (Optional)
+- Data Owner
+-Data Processor
+
+2. Purpose of Collection
+This information is collected for:
+- User authentication
+- Payment processing
+- Service delivery
+- Communication
+
+3. Data Storage and Protection
+- All data is encrypted at rest using AES-256
+- Personal information is stored in secure databases
+- Access is restricted to authorized personnel
+- Regular security audits are performed
+
+4. Data Retention
+- Personal information is retained for 2 years after account closure
+- Financial records are kept for 7 years
+- Audit logs are maintained for 1 year
+
+5. Data Sharing
+The collected information may be shared with:
+- Payment processors
+- Shipping partners
+- Legal authorities (when required)
+
+6. User Rights
+Users can:
+- Access their personal information
+- Request data correction
+- Request data deletion
+- Export their data
+- Opt-out of non-essential data collection
+
+7. Risk Assessment
+Potential risks include:
+- Unauthorized access
+- Data breaches
+- Identity theft
+- Financial fraud
+
+8. Mitigation Measures
+- Regular security updates
+- Employee training
+- Access control monitoring
+- Incident response plan
+- Data breach notification procedures
