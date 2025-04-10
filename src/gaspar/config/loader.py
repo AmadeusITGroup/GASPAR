@@ -6,7 +6,7 @@ import os
 from typing import Optional, Dict, Any
 import yaml
 
-from package.gaspar.config import ModelConfig, StorageConfig, PipelineConfig, GasparConfig
+from gaspar.config import ModelConfig, StorageConfig, PipelineConfig, GasparConfig
 
 
 def load_env_file(env_path: str = '.env') -> Dict[str, str]:

@@ -25,8 +25,8 @@ Local installation can be done using [`uv`](https://github.com/astral-sh/uv):
 
 ```bash
 $ uv venv -p python3.10
-$ uv pip install -e .
 $ source .venv/bin/activate
+$ uv pip install -e .
 ```
 
 For development mode:
@@ -44,8 +44,8 @@ pip install -e ".[databricks]"
 ### Basic Usage
 
 ```python
-from package.gaspar.config import load_config
-from package.gaspar.pipeline.executor import PipelineExecutor
+from gaspar.config import load_config
+from gaspar.pipeline.executor import PipelineExecutor
 import asyncio
 
 async def main():
