@@ -8,7 +8,7 @@ import asyncio
 
 
 class TestGaspar(unittest.TestCase):
-    """Basic tests for GASPAR gaspar."""
+    """Basic tests for GASPAR."""
 
     def test_import(self):
         """Test that the package can be imported."""
