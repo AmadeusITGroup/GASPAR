@@ -6,8 +6,8 @@ import asyncio
 import random
 from datetime import datetime, timedelta, date
 from typing import Dict, Any, AsyncIterator, List
-from src.gaspar.config import load_config
-from src.gaspar.pipeline.executor import PipelineExecutor
+from gaspar.config import load_config
+from gaspar.pipeline.executor import PipelineExecutor
 
 def generate_sample_data(num_records: int = 1000) -> List[Dict[str, Any]]:
     """
