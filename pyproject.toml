@@ -1,8 +1,17 @@
 [build-system]
-requires = ["setuptools>=71", "setuptools-scm>=8"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling>=1.24.2", "hatch-vcs>=0.3.0"]
+build-backend = "hatchling.build"
 
-[tool.setuptools_scm]
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+version_scheme = "python-simplified-semver"
+local_scheme = "no-local-version"
+parentdir_prefix_version = "v"
+git_describe_command = ["git", "describe", "--dirty", "--tags", "--long", "--match", "v*"]
+
+[tool.hatch.build.hooks.vcs]
 write_to = "src/gaspar/_version.py"
 write_to_template = "__version__ = \"{version}\"\n"
 

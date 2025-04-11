@@ -24,6 +24,8 @@ GASPAR is a comprehensive system designed to:
 Local installation can be done using [`uv`](https://github.com/astral-sh/uv):
 
 ```bash
+$ uv python install 3.10
+$ uv python pin 3.10
 $ uv venv -p python3.10
 $ source .venv/bin/activate
 $ uv pip install -e .
