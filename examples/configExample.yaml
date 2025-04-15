@@ -1,0 +1,55 @@
+# GASPAR Configuration File
+
+# LLM Model Configuration
+model:
+  provider: "openai"  # Supported: openai, anthropic, mistral
+  model_name: "gpt-4"
+  token: "token" # Will be loaded from environment variable
+  api_base: "url"  # Optional, default for OpenAI
+  additional_params:
+    temperature: 0.1
+    max_tokens: 2000
+
+# Storage Configuration
+storage:
+  type: "local"  # Supported: local, azure
+  # Local storage settings
+  local_path: "./data"
+  # Azure storage settings (if type is "azure")
+  # connection_string: ${AZURE_STORAGE_CONNECTION_STRING}
+  # container: "gaspar-data"
+
+# Pipeline Configuration
+pipeline:
+  # Data Processing
+  batch_size: 100
+  max_retries: 3
+  temp_directory: "./temp"
+
+  # Monitoring Settings
+  monitoring:
+    sampling_rate: 0.1  # 10% sampling
+    min_batch_size: 100
+    max_batch_size: 10000
+    monitoring_interval: "1h"  # Supports: s (seconds), m (minutes), h (hours), d (days)
+    alert_thresholds:
+      violation_rate: 0.01  # Alert if violations exceed 1%
+      confidence_threshold: 0.95
+
+# Privacy Rules Default Settings
+privacy_rules:
+  default_level: "CONFIDENTIAL"
+  validation_mode: "strict"  # strict or lenient
+  quarantine_location: "./quarantine"
+  alert_destinations:
+    high: "security_team@company.com"
+    medium: "data_team@company.com"
+    low: "logs"
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "logs/gaspar.log"
+  max_size: "10MB"
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
