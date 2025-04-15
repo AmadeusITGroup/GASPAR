@@ -12,12 +12,16 @@ parentdir_prefix_version = "v"
 git_describe_command = ["git", "describe", "--dirty", "--tags", "--long", "--match", "v*"]
 
 [tool.hatch.build.hooks.vcs]
+version-file = "src/gaspar/_version.py"
 write_to = "src/gaspar/_version.py"
 write_to_template = "__version__ = \"{version}\"\n"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/gaspar"]
+
 # GASPAR package dependencies
 [project]
-name = "gaspar"
+name = "amadeus-os-gaspar"
 description = "GenAI-powered System for Privacy incident Analysis and Recovery"
 readme = "README.md"
 requires-python = ">=3.8"
