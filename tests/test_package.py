@@ -8,11 +8,11 @@ import asyncio
 
 
 class TestGaspar(unittest.TestCase):
-    """Basic tests for GASPAR package."""
+    """Basic tests for GASPAR."""
 
     def test_import(self):
         """Test that the package can be imported."""
-        from package.gaspar.config import GasparConfig, ModelConfig, StorageConfig, PipelineConfig
+        from gaspar.config import GasparConfig, ModelConfig, StorageConfig, PipelineConfig
 
         # Create a test configuration
         config = GasparConfig(
