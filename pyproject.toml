@@ -56,6 +56,10 @@ dependencies = [
 [project.scripts]
 gaspar = "gaspar.cli.main:main"
 
+[tool.setuptools.package-dir]
+gaspar = "src/gaspar"
+tests = "tests"
+
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "--strict-markers --doctest-modules --doctest-glob='*.rst' --ignore=setup.py"

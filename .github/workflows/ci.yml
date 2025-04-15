@@ -29,6 +29,11 @@ jobs:
 
     - name: Install the project
       run: uv sync --all-extras --dev
+    
+    - name: Install dependencies
+  run: |
+    uv pip install -e ".[test]"  # Note the added test extra
+    uv pip install pytest pytest-cov pytest-mock
 
     - name: Unit tests
       env:
