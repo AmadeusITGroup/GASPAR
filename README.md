@@ -1,3 +1,12 @@
+<div align="center">
+
+![GASPAR](rescue_logo.png)
+
+</div>
+
+The content of this repository comprises the work which is being been developed in the scope of RESCUE (RESilient Cloud for EUropE) project. 
+The objective is to develop reusable, modular components to strengthen reliability and recover capabilities for (critical) digital services. Pilot Cyber Resilient Digital Twins for Data Centers and Edges that use open cloud infrastructure and are capable of hosting mission-critical applications at large scale.
+
 # GASPAR
 
 **G**enAI-powered **S**ystem for **P**rivacy incident **A**nalysis and **R**ecovery
