@@ -138,4 +138,4 @@ $ ls dist/
 
 ## License
 
-MIT
+ Apache-2.0
