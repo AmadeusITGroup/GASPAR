@@ -1,6 +1,6 @@
 <div align="center">
 
-![GASPAR](rescue_logo.png)
+<img src="assets/BMWE2025_NextGenEU_gef_en_RGB.svg" alt="IPCEI Next Generation Cloud Infrastructure and Services" width="50%">
 
 </div>
 
